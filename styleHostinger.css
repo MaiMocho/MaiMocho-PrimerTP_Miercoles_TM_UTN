@@ -3,3 +3,54 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    font-size: 16px;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.265);
+    padding: 0 10px;
+}
+header .header-left-content{
+    display: flex;
+    height: 88px;
+    width: 500px;
+    padding: 30px;
+}
+header .header-left-content nav{
+display: flex;
+align-items: center;
+gap: 20px;
+padding: 0px 40px;
+}
+header .header-right-content{
+    display: flex;
+    align-items: center;
+    height: 88px;
+    padding-right: 20px;
+    gap: 20px
+}
+.btn-menu{
+    display: none;
+}
+body{
+    background-color: #663f3f;
+}
+@media screen and (max-width: 768px) {
+    header .header-left-content nav{
+        display: none;
+    }
+    header .header-right-content{
+        display: none;
+    }
+    .btn-menu{
+        display: flex;
+    }
+}
