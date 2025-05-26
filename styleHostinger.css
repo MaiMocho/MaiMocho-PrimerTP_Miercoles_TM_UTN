@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 *{
     margin: 0;
@@ -14,31 +15,74 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 88px;
     background-color: white;
     position: sticky;
     top: 0px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.265);
     padding: 0 10px;
 }
+.header-left-content--logo{
+    height: 100%;
+    min-width: 147px;
+}
+.header-left-content img{
+    height: 100%;
+    width: 100%;
+}
 header .header-left-content{
     display: flex;
+    flex-direction: row;
     height: 88px;
-    width: 500px;
+    width: auto ;
     padding: 30px;
 }
 header .header-left-content nav{
 display: flex;
 align-items: center;
-gap: 20px;
+gap: 32px;
 padding: 0px 40px;
+text-decoration: none;
+}
+header .header-left-content nav a{
+    color: #1D1E20ff;
+    text-decoration: none;
+}
+.text-decoration{
+    text-decoration: none;
 }
 header .header-right-content{
     display: flex;
     align-items: center;
     height: 88px;
-    padding-right: 20px;
-    gap: 20px
+    padding-right: 40px;
+    gap: 32px;
+}
+.btn-menu{
+    display: none;
+}
+.btn-language{
+    font-weight: 700;
+    color: #1D1E20ff;
+    border: 0;
+    background-color: transparent;
+    font-size: 16px;
+    max-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.header-right-content a{
+    padding: 12px 16px;
+    border: 2px solid #1D1E20ff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1D1E20ff;
+    font-weight: 700;
+}
+.header-right-content img{
+    width: 32px;
+    height: 20px;
 }
 /* HEADER */
 
@@ -51,6 +95,9 @@ header .header-right-content{
     font-size: 20px;
     color: #2F1C6Aff;
 }
+.font-size-exception{
+    font-size: 48px;
+}
 .font--weight{
     font-weight: 700;
 }
@@ -61,12 +108,12 @@ header .header-right-content{
 .special-font--color{
     color: #673de6;
 }
+.bi-chevron-down{
+    fill: black;
+}
 /* ESTILOS GENERALES */
 
 /* MAIN SECTION */
-.btn-menu{
-    display: none;
-}
 .main-content{
     display: flex;
     flex-direction: row;
@@ -84,30 +131,47 @@ header .header-right-content{
     flex-direction: row;
     align-items: center;
     gap: 40px;
-    margin: 0px 213px;
+    margin: 0px 215px;
+    padding: 0px 40px;
     justify-content: space-between;
 
 }
 .features-description{
-
-}
-.main-left-content{
-    width: 100%;
-    height: 100%;
+    margin-bottom: 24px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 0px 60px;
+}
+.main-left-content{
+    max-width: 463px;
+    max-height: 442px;
+}
+.description-list{
+    padding-bottom: 20px;
 }
 .main-right-content{
     display: flex;
-    justify-items: space-between;
-    align-items: center;
     position:relative
 }
 .h-image img{
     max-width: 880px;
 
+}
+.button-wrapper button{
+    color: white;
+    width: 190px;
+    height: 48px;
+    font-size: 16px;
+    background-color: #673de6;
+    border-radius: 5px;
+    border: none;
+    padding: 12px 48px;
+    font-weight: bold;
+}
+.features-promo{
+    margin-bottom: 24px;
+}
+.features-promo-description{
+    margin-top: 12px;
 }
 /* MAIN SECTION */
 @media screen and (max-width: 768px) {
