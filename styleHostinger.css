@@ -28,15 +28,17 @@ header{
     max-height: 30px;
     min-width: 147px;
 }
-.header-left-content img{
+.header-left-content--logo img{
     height: 100%;
     width: 100%;
+}
+.header-left-content img{
+    max-width: 880px;
 }
 header .header-left-content{
     display: flex;
     flex-direction: row;
     height: 88px;
-    width: auto ;
     padding: 30px;
 }
 header .header-left-content nav{
@@ -45,10 +47,16 @@ align-items: center;
 gap: 32px;
 padding: 0px 40px;
 text-decoration: none;
+width: 100%;
 }
 header .header-left-content nav a{
     color: #1D1E20ff;
     text-decoration: none;
+}
+.btn-menu{
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
 }
 .text-decoration{
     text-decoration: none;
@@ -56,7 +64,6 @@ header .header-left-content nav a{
 header .header-right-content{
     display: flex;
     align-items: center;
-    height: 88px;
     padding-right: 40px;
     gap: 32px;
 }
@@ -132,6 +139,7 @@ header .header-right-content{
 .hero-content{
     display: flex;
     height: auto;
+    width: auto;
     align-items: center;
     background-color: rgb(255, 255, 255);
     padding: 36px 0px;
@@ -139,9 +147,9 @@ header .header-right-content{
 .hero-container--group{
     display: flex;
     align-items: center;
+    width: auto;
     margin: 0px auto;
-    padding: 0px 40px;
-
+    gap: auto;
 }
 .hero-button-gap{
     display: flex;
@@ -179,9 +187,10 @@ header .header-right-content{
     line-height: 40px;
 }
 .hero-left-content{
-    max-width: 463px;
+    width: 463px;
     max-height: 442px;
     column-gap: 40px;
+    padding: 0 30px;
 }
 .description-list{
     padding-bottom: 20px;
@@ -205,10 +214,15 @@ header .header-right-content{
 }
 .hero-right-content{
     display: flex;
-    position:relative
+}
+.h-image{
+    width: 50vw;
+    height: auto;
+    position: static;
 }
 .h-image img{
-    max-width: 880px;
+    width: 100%;
+    height: 100%;
 }
 
 .button-wrapper{
@@ -243,7 +257,7 @@ header .header-right-content{
     align-items: center;
     padding-top: 0px;
     margin: 0 auto;
-    width: 1128px;
+    max-width: 1128px;
     height: 136px;
     padding: 0 40px;
 
@@ -257,7 +271,8 @@ header .header-right-content{
     margin: 0 auto;
 }
 .section-title-content p{
-    max-width: 1140px;
+    width: auto;
+    height: auto;
     margin: 24px auto 0 auto;
     text-align: center;
     line-height: 24px;
@@ -274,8 +289,9 @@ header .header-right-content{
 }
 .section-containers{
     background-color: #2F1C6A;
-    width: 360px;
-    height: 256px;
+    max-width: 360px;
+    min-height: 256px;
+    max-height: 356px;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -322,7 +338,7 @@ footer{
 }
 footer .footer-content{
     background-color: transparent;
-    width: 1208px;
+    max-width: 1208px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -385,7 +401,13 @@ footer .footer-content{
     border-top: 1px solid #d5dfff;
     padding: 24px 0;
 }
-@media screen and (max-width: 1052px) {
+
+    @media screen and (max-width: 1352px) {
+        .h-image img{
+        max-width: 616px ; 
+        }
+    }
+    @media screen and (max-width: 1127px) {
     header .header-left-content nav{
         display: none;
     }
@@ -395,4 +417,139 @@ footer .footer-content{
     .btn-menu{
         display: flex;
     }
-}
+    }
+    @media screen and (max-width: 1056px) {
+        footer .footer-content{
+            width: 100%;
+        }
+        .payment-methods{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: start;
+        }
+
+    }
+    @media screen and (max-width: 1024px)
+    {
+        .hero-container--group{
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .hero-left-content h2{
+            font-size: 28px;
+            width: 580px;
+            margin-bottom: 8px;
+        }
+        .hero-left-content p{
+            font-size: 18px;
+            line-height: 24px;
+            
+        }
+        .font-size-exception--big
+        {
+            font-size: 40px;
+        }
+        .section-title-content
+        {
+            max-width: 688px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section-title-content h2
+        {
+            font-size: 28px;
+        }
+
+        .section-features
+        {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .section-containers
+        {
+            width: 100%;
+            max-width: 688px;
+            height: auto;
+            flex: wrap;
+        }
+        .footer-copyright
+        {
+            gap: 16px;
+            flex-direction: column;
+            align-items: start;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .hero-container--group
+        {
+            align-content: center;
+        }
+        .h-image img{
+        max-width: 688px;
+        max-height: 450px; 
+        }
+        .hero-left-content h2{
+        font-size: 24px;
+        width: 508px;
+        margin-bottom: 8px;
+        }
+        .hero-left-content p{
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .font-size-exception--big
+        {
+            font-size: 36px;
+        }
+        .section-containers
+        {
+            max-width: 508px;
+            max-height: 232px;
+            min-height: 208px;
+        }
+
+        footer .footer-content
+        {
+            width: 508px;
+        }
+        .footer-top{
+            flex-direction: column-reverse;
+            align-items: start;
+            gap: 36px;
+            width: auto;
+        }
+        .footer-links{
+            display:flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .brands{
+        flex-wrap: wrap;
+        width: 300px;
+        height: auto;
+        }        
+        .footer-politics{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        gap: 5px;
+        height: auto;
+        width: auto;
+        }
+        .footer-copyright {
+        text-align: start;
+        margin-top: 20px;
+        gap: 20px;
+        }
+        .payment-methods{
+            margin: 0;
+            height: auto;
+            max-width: 300px;
+        }
+
+    }
